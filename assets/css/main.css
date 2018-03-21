@@ -1,12 +1,56 @@
-.main {
-    border: 1px solid black;
+/* Global */
+html * {
+    font-family: 'Ubuntu', sans-serif;
 }
+/* */
 
+
+/* Main container */
+.main {
+    width: 60%;
+    padding: 0;
+    margin: 0 auto;
+}
+/* */
+
+
+/* Header */
 .header {
-    background-color: #FBE9E7;
+    padding: 1em;
+    background-color: #138D90;
+    border-bottom: 2px solid white;
 }
 
 .header__title {
     text-transform: uppercase;
-    color: #B4B4B4;
+    color: #DDDEDE;
+    font-weight: bold;
 }
+/* */
+
+
+/* Filter */
+.filter {
+    width: 100%;
+}
+
+.filter__option {
+    text-transform: uppercase;
+    float: left;
+    width: 33.33%;
+    line-height: 3em;
+    /* vertical-align: middle; */
+    text-align: center;
+    background-color: #DDDEDE;
+}
+
+.filter__option--all {
+    color: #FD3C3C;
+}
+.filter__option--online {
+    color: #FFB74C;
+}
+.filter__option--offline {
+    color: #061283;
+}
+/* */
