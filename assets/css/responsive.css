@@ -1,5 +1,47 @@
+@media screen and (max-width: 1080px) {
+    .main {
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .main {
         width: 90%;
     }
+}
+
+@media screen and (max-width: 800px) {
+    .channel__status--online {
+        display: inline-block;
+        float: none;
+    }
+
+    .channel__status--offline {
+        display: block;
+        float: none;
+        width: 52px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header__responsive-filter-menu {
+        display: block;
+    }
+
+    .filter {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 100%);
+    }
+    .filter__option {
+        text-align: justify;
+        padding-left: 1em;
+    }
+}
+
+.filter--show {
+    display: grid;
+}
+
+.filter--hide {
+    display: none;
 }

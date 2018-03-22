@@ -2,6 +2,15 @@
 html * {
     font-family: 'Ubuntu', sans-serif;
 }
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 /* */
 
 
@@ -18,13 +27,25 @@ html * {
 .header {
     padding: 1em;
     background-color: #138D90;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #FFF;
+    color: #DDDEDE;
 }
 
 .header__title {
     text-transform: uppercase;
-    color: #DDDEDE;
     font-weight: bold;
+    display: inline-block;
+    text-shadow: 0px 5px 10px#232122;
+}
+
+.header__responsive-filter-menu {
+    font-size: 1.5em;
+    text-align: center;
+    display: none;
+}
+
+.header__responsive-filter-menu:hover {
+    cursor: pointer;
 }
 /* */
 
@@ -32,16 +53,27 @@ html * {
 /* Filter */
 .filter {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3em;
+    grid-gap: 2px;
 }
 
 .filter__option {
     text-transform: uppercase;
-    float: left;
-    width: 33.33%;
     line-height: 3em;
-    /* vertical-align: middle; */
     text-align: center;
     background-color: #DDDEDE;
+    transition: box-shadow 0.25s;
+    opacity: 0.65;
+}
+
+.filter__option:hover {
+    -webkit-box-shadow: 0px 2px 20px 0px #232122;
+    -moz-box-shadow: 0px 2px 20px 0px #232122;
+    box-shadow: 0px 2px 20px 0px #232122;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .filter__option--all {
@@ -52,5 +84,76 @@ html * {
 }
 .filter__option--offline {
     color: #061283;
+}
+
+.filter-selected {
+    -webkit-box-shadow: 0px 2px 20px 0px #232122;
+    -moz-box-shadow: 0px 2px 20px 0px #232122;
+    box-shadow: 0px 2px 20px 0px #232122;
+    z-index: 2;
+    opacity: 1;
+}
+/* */
+
+
+/* List of channels */
+.channel-list {
+    border-top: 5px solid #FFF;
+}
+
+.channel-list__channel {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #FFF;
+    background-color: cornflowerblue;
+    padding: 1em;
+}
+
+.channel-list__channel--online {
+    background-color: #FFB74C;
+}
+.channel-list__channel--offline {
+    background-color: #061283;
+}
+
+.channel__logo {
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    width: 3em;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+}
+
+.channel__name {
+    display: inline-block;
+    line-height: 2em;
+    font-size: 1.5em;
+    padding-left: 0.5em;
+    margin: 0;
+}
+
+.channel__status--online {
+    width: auto;
+    float: right;
+    text-align: justify;
+}
+
+.channel__status--offline {
+    background-color: #DDDEDE;
+    float: right;
+    padding: 3px;
+    margin-left: 1em;
+    font-style: italic;
+    box-sizing: content-box;
+}
+/* */
+
+
+/* Tail */
+.tail {
+    background-color: #138D90;
+    border-top: 2px solid #FFF;
+    height: 1em;
 }
 /* */
